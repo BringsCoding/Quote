@@ -1,0 +1,39 @@
+let button = document.querySelector("#button");
+let arr = [id];
+button.addEventListener("click", function () {
+  fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      arr.push(data);
+      console.log(data);
+    });
+
+  document.getElementById("text").innerHTML = JSON.stringify(arr);
+});
+
+
+
+
+
+
+let button = document.querySelector("#button");
+let arr = [];
+
+button.addEventListener("click", function () {
+  fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      arr.push(data);
+      console.log(data.data[0].quoteText);
+      console.log(data.data[0].quoteAuthor);
+    });
+
+  document.getElementById("text-top").innerHTML = JSON.stringify(arr);
+});
+
+console.log(data.data[0].quoteText);
+console.log(data.data[0].quoteAuthor);
