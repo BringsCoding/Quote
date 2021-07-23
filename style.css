@@ -8,4 +8,11 @@ article {
   justify-content: center;
   align-items: center;
   margin-top: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.col-3 {
+  text-align: end;
+  margin-right: 10px;
 }
